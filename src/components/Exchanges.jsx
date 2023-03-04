@@ -18,7 +18,7 @@ const Exchanges = () => {
   const [isFetching, setIsFetching] = useState(true);
 
   axios
-    .get("https://run.mocky.io/v3/d03505ed-caf6-4c2a-8e45-f2c0ae00f86b")
+    .get("https://run.mocky.io/v3/dac5adfa-d191-4401-83d3-c876a5c723b1")
     .then((response) => {
       setExchangesList(response.data.data.exchanges);
       setIsFetching(false);

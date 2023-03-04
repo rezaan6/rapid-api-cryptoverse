@@ -1,0 +1,86 @@
+{
+  "data": {
+    "exchanges": [
+      {
+        "uuid": "b5ae89b5-6ae5-4162-b3b3-042fde722412",
+        "name": "Binance",
+        "iconUrl": "https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=010",
+        "volume": 246465979.05,
+        "numberOfMarkets": 1036,
+        "marketShare": 29.34,
+        "rank": 1,
+        "description": "<p>Binance is a cryptocurrency exchange that provides a platform for trading various cryptocurrencies. As of January 2018, Binance was the largest cryptocurrency exchange in the world in terms of trading volume. Binance was founded by Changpeng Zhao, a developer who had previously created high-frequency trading software.</p>"
+      },
+      {
+        "uuid": "4ef39d85-c2a9-4c56-9e29-7f740438d8f8",
+        "name": "Huobi Global",
+        "iconUrl": "https://cryptologos.cc/logos/huobi-token-ht-logo.svg?v=010",
+        "volume": 562384763.87,
+        "numberOfMarkets": 233,
+        "marketShare": 8.97,
+        "rank": 4,
+        "description": "<p>Huobi Global is a digital asset trading platform that provides users with trading and investment services. Huobi was founded in 2013 by Leon Li, and the company is headquartered in Singapore.</p>"
+      },
+      {
+        "uuid": "c1d330e1-f0c7-435b-85fe-c65d6af0bc12",
+        "name": "Solana",
+        "iconUrl": "https://cryptologos.cc/logos/solana-sol-logo.svg?v=010",
+        "volume": 67982769.26,
+        "numberOfMarkets": 67,
+        "marketShare": 0.81,
+        "rank": 8,
+        "description": "<p>Solana is a fast, secure, and censorship-resistant blockchain designed for decentralized applications and marketplaces. It features a unique combination of high-performance and low-cost transaction processing, making it ideal for use cases that require high throughput and low fees.</p>"
+      },
+      {
+        "uuid": "b4c22f4d-9e96-4b8d-a538-139e86a328b5",
+        "name": "XRP",
+        "iconUrl": "https://cryptologos.cc/logos/xrp-xrp-logo.svg?v=010",
+        "volume": 87031032.56,
+        "numberOfMarkets": 284,
+        "marketShare": 10.35,
+        "rank": 4,
+        "description": "<p>XRP is a digital asset that is designed to work as a bridge currency in cross-border payments. It is used by financial institutions and payment providers to reduce the costs of currency exchanges and international money transfers. XRP was created by Ripple Labs in 2012 and is based on a decentralized, open-source protocol.</p>"
+      },
+      {
+        "uuid": "c8b92f20-17e2-496c-8d3a-3a3b9f9fe46a",
+        "name": "Avalanche",
+        "iconUrl": "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=010",
+        "volume": 12345678.90,
+        "numberOfMarkets": 87,
+        "marketShare": 4.56,
+        "rank": 14,
+        "description": "<p>Avalanche is an open-source platform for launching decentralized finance applications and enterprise blockchain deployments. It aims to offer the scalability, interoperability, and high throughput required by decentralized applications in order to be useful to real-world users. The project was founded by Emin Gün Sirer, Kevin Sekniqi, and Maofan 'Ted' Yin in 2018.</p>"
+      },
+      {
+        "uuid": "52f37cb9-0d84-4188-87fc-b79e4f37d4c4",
+        "name": "Dogecoin",
+        "iconUrl": "https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=010",
+        "volume": 78901234.56,
+        "numberOfMarkets": 88,
+        "marketShare": 7.92,
+        "rank": 13,
+        "description": "<p>Dogecoin is a cryptocurrency created by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system that is instant, fun, and free from traditional banking fees. Dogecoin features the likeness of the Shiba Inu dog from the 'Doge' meme as its logo and namesake.</p>"
+      },
+      {
+        "uuid": "c9966a8d-6f14-4262-acc2-4443f8ac9c54",
+        "name": "Monero",
+        "iconUrl": "https://cryptologos.cc/logos/monero-xmr-logo.svg?v=010",
+        "volume": 8890323.44,
+        "numberOfMarkets": 41,
+        "marketShare": 1.05,
+        "rank": 32,
+        "description": "<p>Monero is a cryptocurrency that focuses on privacy, decentralization, and scalability. It is an open-source, community-driven project that was launched in 2014. Monero uses a unique combination of technologies to ensure that transactions are private and untraceable, including ring signatures, stealth addresses, and confidential transactions.</p>"
+      },
+      {
+        "uuid": "2739d7c9-3351-4f37-8b8d-5fe817c55e17",
+        "name": "Cosmos",
+        "iconUrl": "https://cryptologos.cc/logos/cosmos-atom-logo.svg?v=010",
+        "volume": 16578147.89,
+        "numberOfMarkets": 43,
+        "marketShare": 1.96,
+        "rank": 26,
+        "description": "<p>Cosmos is a decentralized network of independent parallel blockchains, each powered by BFT consensus algorithms like Tendermint consensus. Cosmos aims to solve some of the hardest blockchain problems such as scalability, usability, and interoperability. Cosmos is based on the Cosmos SDK, which allows developers to build their own blockchain applications using the Cosmos framework.</p>"
+      }
+    ]
+  }
+}
