@@ -30,6 +30,7 @@ a:hover {
 .main {
   flex: 0.8;
   width: 100%;
+  min-height: 100vh;
 }
 .routes {
   padding: 20px;
@@ -50,12 +51,15 @@ a:hover {
   align-items: center;
   width: 100%;
 }
+
 .logo {
   margin: 0 0 0 15px;
 }
+
 .logo a {
   color: white;
 }
+
 .menuControlContainer {
   display: none !important;
   position: absolute !important;
@@ -88,6 +92,7 @@ a:hover {
 @media screen and (max-width: 1000px) {
   .main {
     margin-left: 100px;
+    
   }
 }
 
@@ -124,9 +129,11 @@ a:hover {
     position: absolute;
     right: 0px;
   }
+
   .homeTitle {
     font-size: 1.4rem !important;
   }
+
   .showMore {
     font-size: 1.3rem !important;
   }
@@ -264,9 +271,11 @@ a:hover {
   .statsContainer {
     flex-direction: column;
   }
+
   .coinDescLink {
     flex-direction: column;
   }
+
   .statsContainer h2 {
     margin-top: 0px;
   }
@@ -276,10 +285,12 @@ a:hover {
   .coinLinks {
     padding: 0px;
   }
+
   .coinDetailContainer {
     margin: 0;
   }
 }
+
 @media screen and (max-width: 500px) {
   .heading {
     margin-top: 20px;
@@ -289,13 +300,16 @@ a:hover {
 .selectNews {
   width: 180px;
 }
+
 .newsCard {
   min-height: 300px !important;
 }
+
 .newsImageContainer {
   display: flex !important;
   justify-content: space-between !important;
 }
+
 .newsTitle {
   width: 70%;
 }
@@ -304,14 +318,17 @@ a:hover {
   width: 100px;
   height: 100px;
 }
+
 .newsCard p {
   color: black;
   margin: 10px 0px !important;
 }
+
 .providerContainer {
   display: flex;
   justify-content: space-between;
 }
+
 .providerName {
   margin-left: 10px;
 }
@@ -322,47 +339,63 @@ a:hover {
   gap: 50px;
   color: #0071bd;
 }
+
 .chartTitle {
   color: #0071bd !important;
 }
+
 .priceContainer {
   display: flex !important;
   gap: 20px !important;
   align-items: center !important;
   flex-wrap: wrap !important;
 }
+
 .priceChange {
   font-weight: 900 !important;
 }
+
 .currentPrice {
   margin-top: 0px !important;
   font-weight: 900 !important;
 }
+
 .homeHeadingContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
 }
+
 .showMore {
   margin-top: 0px !important;
 }
+
 .exchangeImage {
   margin: 0px 10px !important;
 }
+
+.exchange-container {
+  height: 100vh;
+}
+
 .searchCrypto {
   margin: 20px auto 30px auto;
   width: 250px;
 }
+
 .cryptoCardContainer {
   min-height: 65vh !important;
 }
+
 .cryptoCard {
   min-width: 250px;
 }
+
 .cryptoCard .cryptoImage {
   width: 35px;
 }
+
 .selectTimeperiod {
   width: 200px !important;
   margin-top: 20px !important;
@@ -374,4 +407,5 @@ a:hover {
   flex-direction: column;
   padding: 20px;
   align-items: center;
+  height: 100%;
 }

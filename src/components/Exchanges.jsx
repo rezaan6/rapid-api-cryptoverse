@@ -31,7 +31,7 @@ const Exchanges = () => {
   if (isFetching) return <Loader />;
 
   return (
-    <>
+    <div className='exchange-container'>
       <Row>
         <Col span={6}>Exchanges</Col>
         <Col span={6}>24h Trade Volume</Col>
@@ -41,7 +41,7 @@ const Exchanges = () => {
       <Row >
         {exchangesList.map((exchange) => (
           <Col span={24}>
-            <Collapse style={{margin:"5px"}}>
+            <Collapse style={{ margin: "5px" }}>
               <Panel
                 key={exchange.uuid}
                 showArrow={false}
@@ -64,7 +64,7 @@ const Exchanges = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   );
 };
 
