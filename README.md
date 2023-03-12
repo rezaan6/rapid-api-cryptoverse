@@ -175,7 +175,7 @@ REACT_APP_CRYPTO_RAPIDAPI_HOST =
 REACT_APP_CRYPTO_API_URL = 
 ```
 
-- Generated key availiable in [Bing News Search]([https://rapidapi.com/Coinranking/api/coinranking1](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1)) under section "Endpoint".
+- Generated key availiable in [Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1) under section "Endpoint".
 ```
 REACT_APP_NEWS_API_URL = '
 REACT_APP_NEWS_RAPIDAPI_HOST = 
