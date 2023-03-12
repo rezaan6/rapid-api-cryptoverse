@@ -40,7 +40,12 @@ export const HomeHeadingContainerWrapper = styled.div`
 export const LinkWrapper = styled(Link)`
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  text-transform: uppercase;
+  color: black !important;
+  
+  &:hover {
+    text-decoration: underline !important;
+  }
+  
 `;
 
 const Homepage = () => {

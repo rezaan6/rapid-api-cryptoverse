@@ -71,12 +71,13 @@ const App = () => (
       </Layout>
       <FooterWrapper>
         <Typography.Title level={5} style={{ color: "white", textAlign: "center" }}>
-          Copyright © 2021
-          <Link to="/">Cryptoverse Inc.</Link> <br />
-          All Rights Reserved.
+          Copyright ©
+          <Link to="/">{" "}Cryptoverse Inc.</Link> <br />
+          This is a Personal Project.
         </Typography.Title>
         <Space>
           <Link to="/">Home</Link>
+          <Link to="/cryptocurrencies">Cryptocurrencies</Link>
           <Link to="/exchanges">Exchanges</Link>
           <Link to="/news">News</Link>
         </Space>

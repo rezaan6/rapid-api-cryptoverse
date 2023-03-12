@@ -20,11 +20,15 @@ export const ExchangeContainerWrapper = styled.div`
 `;
 
 const Exchanges = () => {
+  // Note: To access this endpoint you need premium plan
   // const { data, isFetching } = useGetExchangesQuery();
+  // const exchangesList = data?.data?.exchanges;
 
   const [exchangesList, setExchangesList] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
 
+
+  // hence the use of mockdata that matches the response structure
   axios
     .get("https://run.mocky.io/v3/dac5adfa-d191-4401-83d3-c876a5c723b1")
     .then((response) => {
@@ -35,8 +39,8 @@ const Exchanges = () => {
       setIsFetching(false);
       console.log(err);
     });
-  // const exchangesList = data?.data?.exchanges;
-  // Note: To access this endpoint you need premium plan
+
+
   if (isFetching) return <Loader />;
 
   return (
