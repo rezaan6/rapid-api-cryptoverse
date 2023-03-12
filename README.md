@@ -17,52 +17,48 @@
 
 ## Description
 
-In summary, this project is a full-stack web application that combines the Vite framework, Tailwind CSS, Prettier, ExpressJS, Cloudinary, and MongoDB to deliver a dynamic and efficient user experience.The output of this project is a real-time, interactive application that allows users to generate unique images and art based on their descriptions in natural language. The generated content is then stored and managed using Cloudinary, making it accessible and shareable across the web.
+The Cryptocurrency Application is a comprehensive platform that provides in-depth information about the crypto world, including markets, exchanges, and the latest news. The application is built using [React](https://reactjs.org) and utilizes [Ant Design](https://ant.design) for the user interface design and [Styled Components](https://styled-components.com) for styling the components. The APIs used in the application are provided by [RapidAPI](https://rapidapi.com) and include both [Coinranking](https://rapidapi.com/CoinRanking/api/CoinRanking) and [Bing News Search](https://rapidapi.com/Bing/api/BingNewsSearch) APIs.
 
-### Client
-The "client" folder is a front-end application built using the [Vite framework](https://github.com/vitejs/vite). It utilizes the [Tailwind CSS](https://tailwindcss.com/) framework for styling and the [Prettier](https://prettier.io/) library for code formatting to deliver a visually appealing and well-structured user interface. It also support [TypeScript](https://www.typescriptlang.org/), and its deployed using [Vercel](https://vercel.com/docs)
+The application makes use of [Redux Toolkit](https://redux-toolkit.js.org) for managing API calls and retrieving data from the APIs. The data retrieved from the Coinranking API is used to provide real-time market data and price updates, allowing users to stay up-to-date with the latest trends and fluctuations in the crypto market. This information is presented to users in a clear and concise manner, making it easy for them to quickly understand the current state of the market.
 
-### Server
-The "server" folder is a back-end component powered by [ExpressJS](https://expressjs.com/). It uses [Cloudinary](https://cloudinary.com/) to store and manage images, and is connected to a [MongoDB](https://mongodb.com) database for persistent data storage. It also utilizes the OpenAI's DALL·E 2 AI system, which generates realistic images and art from a description in natural language and its deployed using [Render](https://render.com/)
+In addition to market data, the application also provides access to the latest news and updates from the world of cryptocurrency. This is achieved through the integration of the Bing News Search API, which allows users to search for news articles related to specific cryptocurrencies, exchanges, or other relevant topics. The news articles are presented in a clean and readable format, making it easy for users to stay informed about the latest developments in the crypto world.
+
+The use of [Chart.js](https://www.chartjs.org) allows for the visual representation of the market data, making it easy for users to understand and analyze trends and fluctuations in the crypto market. The combination of Redux Toolkit, Chart.js, and the RapidAPI APIs helps to ensure a fast and responsive user experience, allowing users to easily interact with the application and retrieve the information they need.
+
+Overall, the cryptocurrency application provides a comprehensive and up-to-date understanding of the crypto world, making it an invaluable tool for anyone interested in investing in or following the world of cryptocurrency.
+
 
 
 ## Tech Stack
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [MongoDB](https://www.mongodb.com/)
-- [Cloudinary](https://cloudinary.com/)
-- [Prettier](https://prettier.io/)
-- [ExpressJS](https://expressjs.com/)
-- [Vercel](https://vercel.com/docs)
-- [Render](https://render.com/)
+- [React](https://reactjs.org)
+- [Ant Design](https://ant.design)
+- [Styled Components](https://styled-components.com)
+- [RapidAPI](https://rapidapi.com) 
+    - [Coinranking](https://rapidapi.com/CoinRanking/api/CoinRanking)
+    - [Bing News Search](https://rapidapi.com/Bing/api/BingNewsSearch)
+- [Redux Toolkit](https://redux-toolkit.js.org)
+- [Chart.js](https://www.chartjs.org)
+
 
 ## Features (wait until GIFs load)
 
 - View list of images
 
-![List of Images](https://user-images.githubusercontent.com/72515147/224482269-27877714-dc00-429d-99d8-2659ce3da9e5.gif)
 
 - Download images.
 
-![Download](https://user-images.githubusercontent.com/72515147/224489304-335e5ed6-c207-4200-9e3b-806f866a41a9.gif)
 
 - Title and User included in each image.
 
-![Title and User](https://user-images.githubusercontent.com/72515147/224489404-c1faeceb-03cc-46be-81f8-890811415059.gif)
 
 - Create and post the image
 
-![Posting](https://user-images.githubusercontent.com/72515147/224490228-55a57d2d-68c1-4b50-8272-821785d69de6.gif)
 
 - Random prompt to generate.
 
-![Prompt](https://user-images.githubusercontent.com/72515147/224490060-69d380e3-448c-44a3-89dc-db5e1cca589c.gif)
 
 - View generated image before posting. 
-
-![Generate Image](https://user-images.githubusercontent.com/72515147/224489993-fa8b0408-ab11-4150-9e36-267f1b8793c9.gif)
 
 
 ## Rapid API
@@ -71,38 +67,37 @@ The "server" folder is a back-end component powered by [ExpressJS](https://expre
 
 - `cryptoApi.js`
 
-When a POST request is received at the root URL ("/"), the function defined in the code is executed. It starts by extracting the prompt from the request body and using it as a parameter in a call to the createImage method of the OpenAIApi instance. This method generates an image based on the prompt and returns the result in base64 encoded JSON format.
+The code defines four endpoints for the cryptocurrency application's API: getCryptos, getCryptoDetails, getCryptoHistory, and getExchanges. These endpoints are used to retrieve data from the Coinranking API, which provides real-time market data and price updates for various cryptocurrencies.
 
-The code then extracts the image data from the response and packages it in a JSON object with a property named photo. Finally, the JSON object is sent back to the client with a status code of 200 (OK), indicating that the request was successful.
-
-In the event of an error, the error message is logged to the console and sent back to the client with a status code of 500 (Internal Server Error), indicating that an internal server error occurred.
+The getCryptos endpoint retrieves a list of cryptocurrencies, with the number of cryptocurrencies being limited by the count parameter.
+The getCryptoDetails endpoint retrieves details for a specific cryptocurrency, identified by its coinId.
+The getCryptoHistory endpoint retrieves historical data for a specific cryptocurrency, identified by its coinId, over a specified timeperiod.
+The getExchanges endpoint retrieves a list of exchanges. Note that this endpoint requires a premium plan.
+These endpoints are defined using the builder.query method, which allows for making GET requests to the API. The hooks exported by the API can be used in React components to access the data returned by these endpoints, providing a way to retrieve the latest information about the crypto market.
 
 ```
-import { Configuration, OpenAIApi } from "openai";
+export const cryptoApi = createApi({
+  reducerPath: "cryptoApi",
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_CRYPTO_API_URL }),
+  endpoints: (builder) => ({
+    getCryptos: builder.query({
+      query: (count) => createRequest(`/coins?limit=${count}`),
+    }),
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+    getCryptoDetails: builder.query({
+      query: (coinId) => createRequest(`/coin/${coinId}`),
+    }),
 
-const openai = new OpenAIApi(configuration);
+    getCryptoHistory: builder.query({
+      query: ({ coinId, timeperiod }) =>
+        createRequest(`coin/${coinId}/history?timePeriod=${timeperiod}`),
+    }),
 
-router.route("/").post(async (req, res) => {
-  try {
-    const { prompt } = req.body;
-    const aiResponse = await openai.createImage({
-      prompt,
-      n: 1,
-      size: "256x256",
-      response_format: "b64_json",
-    });
-
-    const image = aiResponse.data.data[0].b64_json;
-
-    res.status(200).json({ photo: image });
-  } catch (error) {
-    console.log(error);
-    res.status(500).send(error?.response.data.error.message);
-  }
+    // Note: To access this endpoint you need premium plan
+    getExchanges: builder.query({
+      query: () => createRequest("/exchanges"),
+    }),
+  }),
 });
 
 ```
@@ -111,6 +106,23 @@ router.route("/").post(async (req, res) => {
 
 - `cryptoNewsApi.js`
 
+The code defines a Redux Toolkit API for retrieving cryptocurrency news from the Bing News Search API. The API is used to fetch news articles related to a specific cryptocurrency, specified by the newsCategory parameter. The number of articles returned by the API is limited by the count parameter.
+
+```
+export const cryptoNewsApi = createApi({
+  reducerPath: "cryptoNewsApi",
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_NEWS_API_URL }),
+  endpoints: (builder) => ({
+    getCryptoNews: builder.query({
+      query: ({ newsCategory, count }) =>
+        createRequest(
+          `/news/search?q=${newsCategory}&safeSearch=Off&textFormat=Raw&freshness=Day&count=${count}`
+        ),
+    }),
+  }),
+});
+
+```
 
 
 ## Format Configuration
