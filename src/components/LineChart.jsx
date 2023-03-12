@@ -1,5 +1,5 @@
-import React from 'react';
-import { Col, Row, Typography } from 'antd';
+import React from "react";
+import { Col, Row, Typography } from "antd";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,20 +9,41 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+import styled from "styled-components";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
+export const ChartHeaderWrapper = styled(Row)`
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: #0071bd;
+`;
 
+export const ChartTitleWrapper = styled(Typography.Title)`
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: #0071bd;
+`;
+
+export const PriceContainerWrapper = styled(Col)`
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const PriceChangeWrapper = styled(Typography.Title)`
+  font-weight: 900;
+`;
+
+export const CurrentPriceWrapper = styled(Typography.Title)`
+  margin-top: 0px;
+  font-weight: 900;
+`;
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
@@ -33,27 +54,24 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   }
 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
-    coinTimestamp.push(
-      new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString(),
-    );
+    coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString());
   }
   const data = {
     labels: coinTimestamp,
     datasets: [
       {
-        label: 'Price In USD',
+        label: "Price In USD",
         data: coinPrice,
         fill: false,
-        backgroundColor: '#0071bd',
-        borderColor: '#0071bd',
+        backgroundColor: "#0071bd",
+        borderColor: "#0071bd",
       },
     ],
   };
 
   const options = {
     scales: {
-      y:
-      {
+      y: {
         ticks: {
           beginAtZero: true,
         },
@@ -63,19 +81,15 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 
   return (
     <>
-      <Row className="chartHeader">
-        <Typography.Title level={2} className="chartTitle">
-          {coinName} Price Chart{' '}
-        </Typography.Title>
-        <Col className="priceContainer">
-          <Typography.Title level={5} className="priceChange">
-            Change: {coinHistory?.data?.change}%
-          </Typography.Title>
-          <Typography.Title level={5} className="currentPrice">
+      <ChartHeaderWrapper>
+        <ChartTitleWrapper level={2}>{coinName} Price Chart </ChartTitleWrapper>
+        <PriceContainerWrapper>
+          <PriceChangeWrapper level={5}>Change: {coinHistory?.data?.change}%</PriceChangeWrapper>
+          <CurrentPriceWrapper level={5}>
             Current {coinName} Price: $ {currentPrice}
-          </Typography.Title>
-        </Col>
-      </Row>
+          </CurrentPriceWrapper>
+        </PriceContainerWrapper>
+      </ChartHeaderWrapper>
       <Line data={data} options={options} />
     </>
   );

@@ -1,25 +1,65 @@
-import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import { Layout, Typography, Space } from 'antd';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import { Layout, Typography, Space } from "antd";
+import styled from "styled-components";
 
-import {
-  Exchanges,
-  Homepage,
-  News,
-  CryptoCurrencies,
-  CryptoDetails,
-  Navbar,
-} from './components';
-import './App.css';
+import { Exchanges, Homepage, News, CryptoCurrencies, CryptoDetails, Navbar } from "./components";
+import "./App.css";
+
+export const AppWrapper = styled.div`
+  display: flex;
+  overflow: hidden;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+export const NavbarWrapper = styled.div`
+  flex: 0.2;
+  min-width: 260px;
+  background-color: rgb(0, 21, 41);
+
+  @media screen and (max-width: 800px) {
+    flex: 1;
+  }
+`;
+
+export const MainWrapper = styled.div`
+  flex: 0.8;
+  width: 100vh;
+  min-height: 100vh;
+
+  @media screen and (max-width: 800px) {
+    flex: 1;
+    margin-top: 90px;
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 100%;
+  }
+`;
+
+export const RoutesWrapper = styled.div`
+  padding: 20px;
+`;
+
+export const FooterWrapper = styled.div`
+  background-color: #001529;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  height: 100%;
+`;
 
 const App = () => (
-  <div className="app">
-    <div className="navbar">
+  <AppWrapper>
+    <NavbarWrapper>
       <Navbar />
-    </div>
-    <div className="main">
+    </NavbarWrapper>
+    <MainWrapper>
       <Layout>
-        <div className="routes">
+        <RoutesWrapper>
           <Routes>
             <Route exact path="/" element={<Homepage />} />
             <Route exact path="/exchanges" element={<Exchanges />} />
@@ -27,13 +67,10 @@ const App = () => (
             <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
             <Route exact path="/news" element={<News />} />
           </Routes>
-        </div>
+        </RoutesWrapper>
       </Layout>
-      <div className="footer">
-        <Typography.Title
-          level={5}
-          style={{ color: 'white', textAlign: 'center' }}
-        >
+      <FooterWrapper>
+        <Typography.Title level={5} style={{ color: "white", textAlign: "center" }}>
           Copyright © 2021
           <Link to="/">Cryptoverse Inc.</Link> <br />
           All Rights Reserved.
@@ -43,9 +80,9 @@ const App = () => (
           <Link to="/exchanges">Exchanges</Link>
           <Link to="/news">News</Link>
         </Space>
-      </div>
-    </div>
-  </div>
+      </FooterWrapper>
+    </MainWrapper>
+  </AppWrapper>
 );
 
 export default App;

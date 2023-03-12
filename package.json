@@ -14,19 +14,21 @@
     "html-react-parser": "^3.0.10",
     "millify": "^5.0.1",
     "moment": "^2.29.4",
+    "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^5.3.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write **/*.{js,jsx,json,md,ts,tsx,css}"
   },
   "eslintConfig": {
     "extends": [
