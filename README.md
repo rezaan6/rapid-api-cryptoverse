@@ -65,8 +65,11 @@ The "server" folder is a back-end component powered by [ExpressJS](https://expre
 ![Generate Image](https://user-images.githubusercontent.com/72515147/224489993-fa8b0408-ab11-4150-9e36-267f1b8793c9.gif)
 
 
-## Open AI DALL E 2 API
-- `dalleRoutes.js`
+## Rapid API
+
+### CoinRanking
+
+- `cryptoApi.js`
 
 When a POST request is received at the root URL ("/"), the function defined in the code is executed. It starts by extracting the prompt from the request body and using it as a parameter in a call to the createImage method of the OpenAIApi instance. This method generates an image based on the prompt and returns the result in base64 encoded JSON format.
 
@@ -104,43 +107,11 @@ router.route("/").post(async (req, res) => {
 
 ```
 
-## Database Structure
+### Bing News Search
 
-### MongoDB
-```
-import mongoose from "mongoose";
+- `cryptoNewsApi.js`
 
-const Post = new mongoose.Schema({
-  name: { type: String, required: true },
-  prompt: { type: String, required: true },
-  photo: { type: String, required: true },
-});
 
-const PostSchema = mongoose.model("Post", Post);
-
-export default PostSchema;
-      
-```
-
-### Cloudinary
-```
-router.route("/").post(async (req, res) => {
-  try {
-    const { name, prompt, photo } = req.body;
-    const photoUrl = await cloudinary.uploader.upload(photo);
-
-    const newPost = await Post.create({
-      name,
-      prompt,
-      photo: photoUrl.url,
-    });
-    res.status(200).json({ success: true, data: newPost });
-  } catch (error) {
-    res.status(500).json({ success: false, message: error });
-  }
-});
-
-```
 
 ## Format Configuration
 ```
@@ -159,71 +130,56 @@ router.route("/").post(async (req, res) => {
 ## Folder Structure
 ```
 .
-|-- client
-|   |-- index.html        
-|   |-- package-lock.json 
-|   |-- package.json      
-|   |-- postcss.config.cjs
-|   |-- public
-|   |   `-- vite.svg      
-|   |-- src
-|   |   |-- App.css
-|   |   |-- App.tsx
-|   |   |-- assets
-|   |   |   |-- download.png
-|   |   |   |-- index.js
-|   |   |   |-- logo.svg
-|   |   |   `-- preview.png
-|   |   |-- components
-|   |   |   |-- Card.tsx
-|   |   |   |-- FormField.tsx
-|   |   |   |-- Loader.tsx
-|   |   |   `-- index.ts
-|   |   |-- constants
-|   |   |   `-- index.ts
-|   |   |-- index.css
-|   |   |-- main.tsx
-|   |   |-- pages
-|   |   |   |-- CreatePost.tsx
-|   |   |   |-- Home.tsx
-|   |   |   `-- index.js
-|   |   `-- utils
-|   |       `-- index.ts
-|   |-- tailwind.config.cjs
-|   `-- vite.config.js
-`-- server
+|-- CrytoExchangeMockData.json
+|-- README.md
+|-- package-lock.json
+|-- package.json
+|-- public
+|   |-- cryptoCurrency.png    
+|   |-- demoImage.webp        
+|   |-- favicon.ico
+|   |-- index.html
+|   |-- logo192.png
+|   `-- manifest.json
+`-- src
+    |-- App.css
+    |-- App.js 
+    |-- app
+    |   `-- store.js
+    |-- components
+    |   |-- CryptoCurrencies.jsx
+    |   |-- CryptoDetails.jsx
+    |   |-- Exchanges.jsx
+    |   |-- Homepage.jsx
+    |   |-- LineChart.jsx
+    |   |-- Loader.jsx
+    |   |-- Navbar.jsx
+    |   |-- News.jsx
+    |   `-- index.js
+    |-- images
+    |   `-- cryptoCurrency.png
     |-- index.js
-    |-- mongodb
-    |   |-- connect.js
-    |   `-- models
-    |       `-- post.js
-    |-- package-lock.json
-    |-- package.json
-    `-- routes
-        |-- dalleRoutes.js
-        `-- postRoutes.js
+    |-- logo.svg
+    `-- services
+        |-- cryptoApi.js
+        `-- cryptoNewsApi.js
 
 ```
 
 ## Environment Variables
 
-- Generate a key from Open AI.
+- Generated key availiable in [CoinRanking](https://rapidapi.com/Coinranking/api/coinranking1) under section "Endpoint".
 ```
-OPENAI_API_KEY=
-```
-
-- Generate using your DB cluster connect option.
-```
-MONGODB_URL=
+REACT_APP_RAPIDAPI_KEY = 
+REACT_APP_CRYPTO_RAPIDAPI_HOST =
+REACT_APP_CRYPTO_API_URL = 
 ```
 
-- Generated on the dashboard of Cloudinary under the section "Product Environment Credentials".
+- Generated key availiable in [Bing News Search]([https://rapidapi.com/Coinranking/api/coinranking1](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1)) under section "Endpoint".
 ```
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
+REACT_APP_NEWS_API_URL = '
+REACT_APP_NEWS_RAPIDAPI_HOST = 
 ```
-
 
 
 
