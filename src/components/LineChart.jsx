@@ -18,15 +18,14 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 export const ChartHeaderWrapper = styled(Row)`
   display: flex;
   justify-content: space-between;
-  gap: 50px;
   color: #0071bd;
 `;
 
 export const ChartTitleWrapper = styled(Typography.Title)`
   display: flex;
   justify-content: space-between;
-  gap: 50px;
   color: #0071bd;
+  margin-top: 1.2rem;
 `;
 
 export const PriceContainerWrapper = styled(Col)`
@@ -36,14 +35,11 @@ export const PriceContainerWrapper = styled(Col)`
   flex-wrap: wrap;
 `;
 
-export const PriceChangeWrapper = styled(Typography.Title)`
+export const PriceWrapper = styled(Typography.Title)`
   font-weight: 900;
+  margin-top: 10px !important;
 `;
 
-export const CurrentPriceWrapper = styled(Typography.Title)`
-  margin-top: 0px;
-  font-weight: 900;
-`;
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
@@ -84,10 +80,8 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
       <ChartHeaderWrapper>
         <ChartTitleWrapper level={2}>{coinName} Price Chart </ChartTitleWrapper>
         <PriceContainerWrapper>
-          <PriceChangeWrapper level={5}>Change: {coinHistory?.data?.change}%</PriceChangeWrapper>
-          <CurrentPriceWrapper level={5}>
-            Current {coinName} Price: $ {currentPrice}
-          </CurrentPriceWrapper>
+          <PriceWrapper level={5}>Change: {coinHistory?.data?.change}%</PriceWrapper>
+          <PriceWrapper level={5}>Current {coinName} Price: $ {currentPrice}</PriceWrapper>
         </PriceContainerWrapper>
       </ChartHeaderWrapper>
       <Line data={data} options={options} />
