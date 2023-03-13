@@ -3,14 +3,11 @@
 ## Table of Contents
 
 - [Description](#description)
-  - [Client](#client)
-  - [Server](#server)
 - [Tech Stack](#tech-stack)
 - [Features](#features-wait-until-gifs-load)
-- [Open AI DALL·E 2 API](#open-ai-dall-e-2-api)
-- [Database Structure](#database-structure)
-  - [MongoDB](#mongodb)
-  - [Cloudinary](#cloudinary)
+- [Rapid API](#rapid-api)
+    - [CoinRanking](#coinranking)
+    - [Bing News Search](#bing-news-search)
 - [Format Configuration](#format-configuration)
 - [Folder Structure](#folder-structure)
 - [Environment Variables](#environment-variables)
@@ -32,25 +29,57 @@ Overall, the cryptocurrency application provides a comprehensive and up-to-date 
 - [React](https://reactjs.org)
 - [Ant Design](https://ant.design)
 - [Styled Components](https://styled-components.com)
-- [RapidAPI](https://rapidapi.com)
-  - [Coinranking](https://rapidapi.com/CoinRanking/api/CoinRanking)
-  - [Bing News Search](https://rapidapi.com/Bing/api/BingNewsSearch)
+- [RapidAPI](https://rapidapi.com) 
+    - [Coinranking](https://rapidapi.com/CoinRanking/api/CoinRanking)
+    - [Bing News Search](https://rapidapi.com/Bing/api/BingNewsSearch)
 - [Redux Toolkit](https://redux-toolkit.js.org)
 - [Chart.js](https://www.chartjs.org)
 
 ## Features (wait until GIFs load)
 
-- View list of images
+- View Dashboard.
 
-- Download images.
+![Dashboard](https://user-images.githubusercontent.com/72515147/224726125-4e72e018-c567-4966-9ec6-a977731de905.gif)
 
-- Title and User included in each image.
+- List of Crypto currency info.
 
-- Create and post the image
+![List of Crypto](https://user-images.githubusercontent.com/72515147/224727079-63169b84-d489-40e8-b8f3-44dabe32794a.gif)
 
-- Random prompt to generate.
+- Searchable list by crypto currencies.
 
-- View generated image before posting.
+![Search list of cryptocurrencies](https://user-images.githubusercontent.com/72515147/224728561-732004e6-8c5b-4772-b5fd-d6fb6897b857.gif)
+
+- List of Crypto News.
+
+![List of Crypto News](https://user-images.githubusercontent.com/72515147/224730085-0f131e42-020b-4298-9608-b3c5764822a9.gif)
+
+- Filter Crypto News by category.
+
+![Filter by News Category](https://user-images.githubusercontent.com/72515147/224730773-6a1af992-aec6-4106-9e17-cdcc610dbe81.gif)
+
+- View Crypto News. 
+
+![News view](https://user-images.githubusercontent.com/72515147/224738107-0c82c546-cd64-4c26-ac03-da09b709f342.gif)
+
+- List of Exchanges rates Info
+
+![Exchange rate](https://user-images.githubusercontent.com/72515147/224738503-10fb9ad5-ebe3-4667-9c83-90d43a2c7e05.gif)
+
+- Details of a Cryptocurrency.
+
+![Crypto Details](https://user-images.githubusercontent.com/72515147/224740159-544632dc-e84b-4eaf-ae11-b7d46dd0815e.gif)
+
+- Links to list for a Cryptocurrency.
+
+![Web Links](https://user-images.githubusercontent.com/72515147/224747421-1e37c15a-8056-4abb-a959-b50afb5cc1b7.gif)
+
+- Chart view and filter by duration
+
+![Chart](https://user-images.githubusercontent.com/72515147/224748133-0773d6e6-7c31-49c8-9d3c-cbf53d6a3a7a.gif)
+
+- Responsive Support
+
+![Responsive Screen](https://user-images.githubusercontent.com/72515147/224749119-36f3d2f4-6f5d-47f7-b2b9-530b1abc6bed.gif)
 
 ## Rapid API
 
@@ -115,8 +144,8 @@ export const cryptoNewsApi = createApi({
 
 ```
 
-## Format Configuration
 
+## Format Configuration
 ```
 
 {
@@ -131,7 +160,6 @@ export const cryptoNewsApi = createApi({
 ```
 
 ## Folder Structure
-
 ```
 .
 |-- CrytoExchangeMockData.json
@@ -139,15 +167,15 @@ export const cryptoNewsApi = createApi({
 |-- package-lock.json
 |-- package.json
 |-- public
-|   |-- cryptoCurrency.png
-|   |-- demoImage.webp
+|   |-- cryptoCurrency.png    
+|   |-- demoImage.webp        
 |   |-- favicon.ico
 |   |-- index.html
 |   |-- logo192.png
 |   `-- manifest.json
 `-- src
     |-- App.css
-    |-- App.js
+    |-- App.js 
     |-- app
     |   `-- store.js
     |-- components
@@ -173,16 +201,14 @@ export const cryptoNewsApi = createApi({
 ## Environment Variables
 
 - Generated key availiable in [CoinRanking](https://rapidapi.com/Coinranking/api/coinranking1) under section "Endpoint".
-
 ```
-REACT_APP_RAPIDAPI_KEY =
+REACT_APP_RAPIDAPI_KEY = 
 REACT_APP_CRYPTO_RAPIDAPI_HOST =
-REACT_APP_CRYPTO_API_URL =
+REACT_APP_CRYPTO_API_URL = 
 ```
 
 - Generated key availiable in [Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1) under section "Endpoint".
-
 ```
 REACT_APP_NEWS_API_URL = '
-REACT_APP_NEWS_RAPIDAPI_HOST =
+REACT_APP_NEWS_RAPIDAPI_HOST = 
 ```
