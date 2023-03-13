@@ -47,7 +47,7 @@ Overall, the cryptocurrency application provides a comprehensive and up-to-date 
 
 - Searchable list by crypto currencies.
 
-![Search list of cryptocurrencies](https://user-images.githubusercontent.com/72515147/224728561-732004e6-8c5b-4772-b5fd-d6fb6897b857.gif)
+![Search list of cryptocurrencies](https://user-images.githubusercontent.com/72515147/224750766-24bee1c8-19d1-469e-a834-f8322f0c9aeb.gif)
 
 - List of Crypto News.
 
