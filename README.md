@@ -3,14 +3,14 @@
 ## Table of Contents
 
 - [Description](#description)
-    - [Client](#client)
-    - [Server](#server)
+  - [Client](#client)
+  - [Server](#server)
 - [Tech Stack](#tech-stack)
 - [Features](#features-wait-until-gifs-load)
 - [Open AI DALL·E 2 API](#open-ai-dall-e-2-api)
 - [Database Structure](#database-structure)
-    - [MongoDB](#mongodb)
-    - [Cloudinary](#cloudinary)
+  - [MongoDB](#mongodb)
+  - [Cloudinary](#cloudinary)
 - [Format Configuration](#format-configuration)
 - [Folder Structure](#folder-structure)
 - [Environment Variables](#environment-variables)
@@ -27,39 +27,30 @@ The use of [Chart.js](https://www.chartjs.org) allows for the visual representat
 
 Overall, the cryptocurrency application provides a comprehensive and up-to-date understanding of the crypto world, making it an invaluable tool for anyone interested in investing in or following the world of cryptocurrency.
 
-
-
 ## Tech Stack
 
 - [React](https://reactjs.org)
 - [Ant Design](https://ant.design)
 - [Styled Components](https://styled-components.com)
-- [RapidAPI](https://rapidapi.com) 
-    - [Coinranking](https://rapidapi.com/CoinRanking/api/CoinRanking)
-    - [Bing News Search](https://rapidapi.com/Bing/api/BingNewsSearch)
+- [RapidAPI](https://rapidapi.com)
+  - [Coinranking](https://rapidapi.com/CoinRanking/api/CoinRanking)
+  - [Bing News Search](https://rapidapi.com/Bing/api/BingNewsSearch)
 - [Redux Toolkit](https://redux-toolkit.js.org)
 - [Chart.js](https://www.chartjs.org)
-
 
 ## Features (wait until GIFs load)
 
 - View list of images
 
-
 - Download images.
-
 
 - Title and User included in each image.
 
-
 - Create and post the image
-
 
 - Random prompt to generate.
 
-
-- View generated image before posting. 
-
+- View generated image before posting.
 
 ## Rapid API
 
@@ -124,8 +115,8 @@ export const cryptoNewsApi = createApi({
 
 ```
 
-
 ## Format Configuration
+
 ```
 
 {
@@ -140,6 +131,7 @@ export const cryptoNewsApi = createApi({
 ```
 
 ## Folder Structure
+
 ```
 .
 |-- CrytoExchangeMockData.json
@@ -147,15 +139,15 @@ export const cryptoNewsApi = createApi({
 |-- package-lock.json
 |-- package.json
 |-- public
-|   |-- cryptoCurrency.png    
-|   |-- demoImage.webp        
+|   |-- cryptoCurrency.png
+|   |-- demoImage.webp
 |   |-- favicon.ico
 |   |-- index.html
 |   |-- logo192.png
 |   `-- manifest.json
 `-- src
     |-- App.css
-    |-- App.js 
+    |-- App.js
     |-- app
     |   `-- store.js
     |-- components
@@ -181,18 +173,16 @@ export const cryptoNewsApi = createApi({
 ## Environment Variables
 
 - Generated key availiable in [CoinRanking](https://rapidapi.com/Coinranking/api/coinranking1) under section "Endpoint".
+
 ```
-REACT_APP_RAPIDAPI_KEY = 
+REACT_APP_RAPIDAPI_KEY =
 REACT_APP_CRYPTO_RAPIDAPI_HOST =
-REACT_APP_CRYPTO_API_URL = 
+REACT_APP_CRYPTO_API_URL =
 ```
 
 - Generated key availiable in [Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1) under section "Endpoint".
+
 ```
 REACT_APP_NEWS_API_URL = '
-REACT_APP_NEWS_RAPIDAPI_HOST = 
+REACT_APP_NEWS_RAPIDAPI_HOST =
 ```
-
-
-
-

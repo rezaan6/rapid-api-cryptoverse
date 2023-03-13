@@ -27,7 +27,6 @@ const Exchanges = () => {
   const [exchangesList, setExchangesList] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
 
-
   // hence the use of mockdata that matches the response structure
   axios
     .get("https://run.mocky.io/v3/dac5adfa-d191-4401-83d3-c876a5c723b1")
@@ -39,7 +38,6 @@ const Exchanges = () => {
       setIsFetching(false);
       console.log(err);
     });
-
 
   if (isFetching) return <Loader />;
 

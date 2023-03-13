@@ -54,7 +54,6 @@ export const MenuControlContainerWrapper = styled(Button)`
   position: absolute;
   right: 10px;
   top: 25px;
-  font-size: 1.2rem;
   background-color: #f9f9f9;
   border: none;
 

@@ -41,11 +41,10 @@ export const LinkWrapper = styled(Link)`
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: black !important;
-  
+
   &:hover {
     text-decoration: underline !important;
   }
-  
 `;
 
 const Homepage = () => {

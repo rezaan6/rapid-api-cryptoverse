@@ -40,7 +40,6 @@ export const PriceWrapper = styled(Typography.Title)`
   margin-top: 10px !important;
 `;
 
-
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimestamp = [];
@@ -81,7 +80,9 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
         <ChartTitleWrapper level={2}>{coinName} Price Chart </ChartTitleWrapper>
         <PriceContainerWrapper>
           <PriceWrapper level={5}>Change: {coinHistory?.data?.change}%</PriceWrapper>
-          <PriceWrapper level={5}>Current {coinName} Price: $ {currentPrice}</PriceWrapper>
+          <PriceWrapper level={5}>
+            Current {coinName} Price: $ {currentPrice}
+          </PriceWrapper>
         </PriceContainerWrapper>
       </ChartHeaderWrapper>
       <Line data={data} options={options} />

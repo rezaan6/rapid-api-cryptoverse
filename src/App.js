@@ -71,8 +71,7 @@ const App = () => (
       </Layout>
       <FooterWrapper>
         <Typography.Title level={5} style={{ color: "white", textAlign: "center" }}>
-          Copyright ©
-          <Link to="/">{" "}Cryptoverse Inc.</Link> <br />
+          Copyright ©<Link to="/"> Cryptoverse Inc.</Link> <br />
           This is a Personal Project.
         </Typography.Title>
         <Space>
