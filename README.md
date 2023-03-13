@@ -1,4 +1,4 @@
-# Open AI Chatbot
+# CryptoVerse - Rapid API Crypto App 
 
 ## Table of Contents
 
