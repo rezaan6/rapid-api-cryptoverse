@@ -34,6 +34,7 @@ Overall, the cryptocurrency application provides a comprehensive and up-to-date 
     - [Bing News Search](https://rapidapi.com/Bing/api/BingNewsSearch)
 - [Redux Toolkit](https://redux-toolkit.js.org)
 - [Chart.js](https://www.chartjs.org)
+- [Vercel](https://vercel.com/docs)
 
 ## Features (wait until GIFs load)
 
