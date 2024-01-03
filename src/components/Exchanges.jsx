@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import millify from "millify";
 import { Collapse, Row, Col, Typography, Avatar } from "antd";
 import HTMLReactParser from "html-react-parser";
 import styled from "styled-components";
+import CrytoExchangeMockData from '../data/CrytoExchangeMockData.json'
 
 // import { useGetExchangesQuery } from '../services/cryptoApi';
-import Loader from "./Loader";
-import axios from "axios";
 
 const { Text } = Typography;
 const { Panel } = Collapse;
@@ -22,24 +21,7 @@ export const ExchangeContainerWrapper = styled.div`
 const Exchanges = () => {
   // Note: To access this endpoint you need premium plan
   // const { data, isFetching } = useGetExchangesQuery();
-  // const exchangesList = data?.data?.exchanges;
-
-  const [exchangesList, setExchangesList] = useState([]);
-  const [isFetching, setIsFetching] = useState(true);
-
-  // hence the use of mockdata that matches the response structure
-  axios
-    .get("https://run.mocky.io/v3/dac5adfa-d191-4401-83d3-c876a5c723b1")
-    .then((response) => {
-      setExchangesList(response.data.data.exchanges);
-      setIsFetching(false);
-    })
-    .catch((err) => {
-      setIsFetching(false);
-      console.log(err);
-    });
-
-  if (isFetching) return <Loader />;
+  const exchangesList = CrytoExchangeMockData.data?.exchanges;
 
   return (
     <ExchangeContainerWrapper>
